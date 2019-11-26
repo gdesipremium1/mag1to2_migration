@@ -1,0 +1,217 @@
+2019/11/04 08:56:17 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "favicon.ico". in C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step5
+---
+2019/11/04 11:05:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ''333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410'' à la ligne 1. The SQL statement executed was: SELECT * FROM `catalog_category_product` `t` WHERE category_id IN '333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410'.
+2019/11/04 11:05:24 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ''333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410'' à la ligne 1. The SQL statement executed was: SELECT * FROM `catalog_category_product` `t` WHERE category_id IN '333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410' in C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php:547
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php(399): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php(1027): CActiveRecord->findAll('category_id IN ...')
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\web\actions\CInlineAction.php(49): MigrateController->actionStep5()
+#5 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): CController->run('step5')
+#9 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('migrate/step5')
+#10 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/migrate/step5
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step5
+---
+2019/11/04 11:05:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ''(333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410)'' à la ligne 1. The SQL statement executed was: SELECT * FROM `catalog_category_product` `t` WHERE category_id IN '(333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410)'.
+2019/11/04 11:05:43 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ''(333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410)'' à la ligne 1. The SQL statement executed was: SELECT * FROM `catalog_category_product` `t` WHERE category_id IN '(333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410)' in C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php:547
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php(399): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php(1027): CActiveRecord->findAll('category_id IN ...')
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\web\actions\CInlineAction.php(49): MigrateController->actionStep5()
+#5 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): CController->run('step5')
+#9 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('migrate/step5')
+#10 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/migrate/step5
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step5
+---
+2019/11/04 11:06:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ''(333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410)'' à la ligne 1. The SQL statement executed was: SELECT * FROM `catalog_category_product` `t` WHERE t.category_id IN '(333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410)'.
+2019/11/04 11:06:09 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ''(333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410)'' à la ligne 1. The SQL statement executed was: SELECT * FROM `catalog_category_product` `t` WHERE t.category_id IN '(333,337,338,339,340,343,355,356,359,360,362,364,395,396,399,400,410)' in C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php:547
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php(399): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php(1027): CActiveRecord->findAll('t.category_id I...')
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\web\actions\CInlineAction.php(49): MigrateController->actionStep5()
+#5 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): CController->run('step5')
+#9 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('migrate/step5')
+#10 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/migrate/step5
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step5
+---
+2019/11/04 11:09:43 [error] [exception.CException] CException: Mage1CatalogCategoryProduct and its behaviors do not have a method or closure named "findProduct_id". in C:\wamp64-current\www\magento2_data_migration-master\yii\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(229): CComponent->__call('findProduct_id', Array)
+#1 C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php(1027): CActiveRecord->__call('findProduct_id', Array)
+#2 C:\wamp64-current\www\magento2_data_migration-master\yii\web\actions\CInlineAction.php(49): MigrateController->actionStep5()
+#3 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): CController->run('step5')
+#7 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('migrate/step5')
+#8 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/migrate/step5
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step5
+---
+2019/11/04 11:14:15 [error] [exception.CException] CException: Property "Mage1CatalogCategoryProduct.CActiveRecord" is not defined. in C:\wamp64-current\www\magento2_data_migration-master\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(145): CComponent->__get('CActiveRecord')
+#1 C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php(1030): CActiveRecord->__get('CActiveRecord')
+#2 C:\wamp64-current\www\magento2_data_migration-master\yii\web\actions\CInlineAction.php(49): MigrateController->actionStep5()
+#3 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): CController->run('step5')
+#7 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('migrate/step5')
+#8 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/migrate/step5
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step5
+---
+2019/11/04 11:16:19 [error] [php] Undefined index: CActiveRecord_new (C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php:1031)
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): MigrateController->runAction()
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): MigrateController->runActionWithFilters()
+#2 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): MigrateController->run()
+#3 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CWebApplication->run()
+REQUEST_URI=/index.php/migrate/step5
+2019/11/04 11:16:39 [error] [php] Trying to get property of non-object (C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php:1031)
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): MigrateController->runAction()
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): MigrateController->runActionWithFilters()
+#2 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): MigrateController->run()
+#3 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CWebApplication->run()
+REQUEST_URI=/index.php/migrate/step5
+2019/11/04 12:23:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ '2' pour la clef 'PRIMARY'. The SQL statement executed was: INSERT INTO `salesrule` (`uses_per_customer`, `is_active`, `stop_rules_processing`, `is_advanced`, `sort_order`, `discount_amount`, `discount_step`, `apply_to_shipping`, `times_used`, `is_rss`, `coupon_type`, `use_auto_generation`, `uses_per_coupon`, `simple_free_shipping`, `rule_id`, `name`, `from_date`, `to_date`, `conditions_serialized`, `actions_serialized`, `simple_action`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20).
+2019/11/04 12:23:36 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ '2' pour la clef 'PRIMARY'. The SQL statement executed was: INSERT INTO `salesrule` (`uses_per_customer`, `is_active`, `stop_rules_processing`, `is_advanced`, `sort_order`, `discount_amount`, `discount_step`, `apply_to_shipping`, `times_used`, `is_rss`, `coupon_type`, `use_auto_generation`, `uses_per_coupon`, `simple_free_shipping`, `rule_id`, `name`, `from_date`, `to_date`, `conditions_serialized`, `actions_serialized`, `simple_action`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20) in C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php:361
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php(3155): CActiveRecord->save()
+#3 C:\wamp64-current\www\magento2_data_migration-master\yii\web\actions\CInlineAction.php(49): MigrateController->actionStep7()
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): CController->run('step7')
+#8 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('migrate/step7')
+#9 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/migrate/step7
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step7
+---
+2019/11/04 12:39:24 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ '2' pour la clef 'PRIMARY'. The SQL statement executed was: INSERT INTO `salesrule` (`uses_per_customer`, `is_active`, `stop_rules_processing`, `is_advanced`, `sort_order`, `discount_amount`, `discount_step`, `apply_to_shipping`, `times_used`, `is_rss`, `coupon_type`, `use_auto_generation`, `uses_per_coupon`, `simple_free_shipping`, `rule_id`, `name`, `from_date`, `to_date`, `conditions_serialized`, `actions_serialized`, `simple_action`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20).
+2019/11/04 12:39:24 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ '2' pour la clef 'PRIMARY'. The SQL statement executed was: INSERT INTO `salesrule` (`uses_per_customer`, `is_active`, `stop_rules_processing`, `is_advanced`, `sort_order`, `discount_amount`, `discount_step`, `apply_to_shipping`, `times_used`, `is_rss`, `coupon_type`, `use_auto_generation`, `uses_per_coupon`, `simple_free_shipping`, `rule_id`, `name`, `from_date`, `to_date`, `conditions_serialized`, `actions_serialized`, `simple_action`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20) in C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php:361
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php(3155): CActiveRecord->save()
+#3 C:\wamp64-current\www\magento2_data_migration-master\yii\web\actions\CInlineAction.php(49): MigrateController->actionStep7()
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): CController->run('step7')
+#8 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('migrate/step7')
+#9 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/migrate/step7
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step7
+---
+2019/11/04 12:42:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ '247893' pour la clef 'PRIMARY'. The SQL statement executed was: INSERT INTO `sales_bestsellers_aggregated_daily` (`product_price`, `qty_ordered`, `rating_pos`, `id`, `period`, `store_id`, `product_id`, `product_name`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+2019/11/04 12:42:29 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ '247893' pour la clef 'PRIMARY'. The SQL statement executed was: INSERT INTO `sales_bestsellers_aggregated_daily` (`product_price`, `qty_ordered`, `rating_pos`, `id`, `period`, `store_id`, `product_id`, `product_name`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7) in C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php:361
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php(3101): CActiveRecord->save()
+#3 C:\wamp64-current\www\magento2_data_migration-master\yii\web\actions\CInlineAction.php(49): MigrateController->actionStep7()
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): CController->run('step7')
+#8 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('migrate/step7')
+#9 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/migrate/step7
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step7
+---
+2019/11/04 13:22:24 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de 'LIMIT 1' à la ligne 1. The SQL statement executed was: SELECT * FROM `catalog_category_entity_datetime` `t` WHERE entity_id= 333 AND attribute_id = 61 AND store_id =  LIMIT 1.
+2019/11/04 13:22:24 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de 'LIMIT 1' à la ligne 1. The SQL statement executed was: SELECT * FROM `catalog_category_entity_datetime` `t` WHERE entity_id= 333 AND attribute_id = 61 AND store_id =  LIMIT 1 in C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php:547
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php(418): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php(756): CActiveRecord->find('entity_id= 333 ...')
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\web\actions\CInlineAction.php(49): MigrateController->actionStep4()
+#5 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): CController->run('step4')
+#9 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('migrate/step4')
+#10 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/migrate/step4
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step4
+---
+2019/11/04 13:22:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "favicon.ico". in C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step4
+---
+2019/11/04 13:24:18 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de 'LIMIT 1' à la ligne 1. The SQL statement executed was: SELECT * FROM `catalog_category_entity_datetime` `t` WHERE entity_id= 333 AND attribute_id = 61 AND store_id =  LIMIT 1.
+2019/11/04 13:24:18 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de 'LIMIT 1' à la ligne 1. The SQL statement executed was: SELECT * FROM `catalog_category_entity_datetime` `t` WHERE entity_id= 333 AND attribute_id = 61 AND store_id =  LIMIT 1 in C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php:547
+Stack trace:
+#0 C:\wamp64-current\www\magento2_data_migration-master\yii\db\CDbCommand.php(418): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 C:\wamp64-current\www\magento2_data_migration-master\yii\db\ar\CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp64-current\www\magento2_data_migration-master\protected\controllers\MigrateController.php(756): CActiveRecord->find('entity_id= 333 ...')
+#4 C:\wamp64-current\www\magento2_data_migration-master\yii\web\actions\CInlineAction.php(49): MigrateController->actionStep4()
+#5 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(282): CController->run('step4')
+#9 C:\wamp64-current\www\magento2_data_migration-master\yii\web\CWebApplication.php(141): CWebApplication->runController('migrate/step4')
+#10 C:\wamp64-current\www\magento2_data_migration-master\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\wamp64-current\www\magento2_data_migration-master\index.php(21): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/migrate/step4
+HTTP_REFERER=http://mag2-migration.local/index.php/migrate/step4
+---
